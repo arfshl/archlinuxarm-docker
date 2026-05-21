@@ -13,7 +13,7 @@ echo "ARCH=$ARCH" >> "$GITHUB_OUTPUT"
 
 curl -L http://os.archlinuxarm.org/os/ArchLinuxARM-$ARCH-latest.tar.gz --output archlinux.tar.gz
 mkdir dump
-sudo tar -xzpf archlinux.tar.gz
+sudo tar -xzpf archlinux.tar.gz -C dump
 
 cat <<- EOF | sudo unshare -mpf bash -e -
 rm -f "./dump/etc/resolv.conf"
