@@ -3,7 +3,7 @@
 Unofficial docker image for Arch Linux ARM
 
 #### Supported arch and tags
-- `arm64`, and `arm/v7` are supported
+- `arm64` and `arm/v7` are supported
 - `latest` tag is always the most recent version currently available. pull with:
 
       docker pull arfshl/archlinuxarm:latest
