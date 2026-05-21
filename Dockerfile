@@ -1,4 +1,5 @@
 FROM scratch
 ARG TARGETARCH
-ADD archlinux-${TARGETARCH}.tar.xz /
+ARG BUILDDATE
+ADD archlinux-${BUILDDATE}-${TARGETARCH}.tar.xz /
 CMD ["/bin/bash"]

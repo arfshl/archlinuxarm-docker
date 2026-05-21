@@ -79,8 +79,12 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Downcase Repo Name
-        run: echo "REPONAME=${GITHUB_REPOSITORY,,}" >> $GITHUB_ENV
+      - name: 
+        run: |
+          # Downcase Repo Name
+          echo "REPONAME=${GITHUB_REPOSITORY,,}" >> $GITHUB_ENV
+          # Set BUILDDATE env
+          export BUILDDATE=$(date +"%Y%m%d")
 
       - name: Download artifact
         uses: actions/download-artifact@v8
@@ -96,6 +100,8 @@ jobs:
         with:
           context: .
           push: true
+          build-args : |
+            BUILDDATE=${{ env.BUILDDATE }}
           platforms: |
             linux/arm64
             linux/arm/v7
