@@ -84,7 +84,7 @@ jobs:
           # Downcase Repo Name
           echo "REPONAME=${GITHUB_REPOSITORY,,}" >> $GITHUB_ENV
           # Set BUILDDATE env
-          export BUILDDATE=$(date +"%Y%m%d")
+          echo "BUILDDATE=$(date +"%Y%m%d")" >> $GITHUB_ENV
 
       - name: Download artifact
         uses: actions/download-artifact@v8
