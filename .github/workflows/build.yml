@@ -85,7 +85,7 @@ jobs:
           username: arfshl
           password: ${{ secrets.DOCKERPASS }}
 
-      - name: 
+      - name: Set env
         run: |
           # Downcase Repo Name
           echo "REPONAME=${GITHUB_REPOSITORY,,}" >> $GITHUB_ENV
