@@ -26,7 +26,7 @@ mount --bind /sys "./dump/sys"
 #chroot "./dump" useradd -r -s /usr/bin/nologin -d /var/lib/pacman alpm
 chroot "./dump" pacman-key --init
 chroot "./dump" pacman-key --populate archlinuxarm
-chroot "./dump" pacman -Rnsc --noconfirm linux-$ARCH linux-firmware
+chroot "./dump" pacman -Rnsc --noconfirm linux-$ARCH linux-firmware systemd dbus kmod
 chroot "./dump" pacman -Syu --noconfirm
 chroot "./dump" rm -f /var/cache/pacman/pkg/*
 sed -i 's/#DisableSandbox/DisableSandbox/' "./dump/etc/pacman.conf"
