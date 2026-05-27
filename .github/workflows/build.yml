@@ -112,7 +112,7 @@ jobs:
             linux/arm64
             linux/arm/v7
           tags: |
-            ghcr.ioarfshl/archlinuxarm:latest
+            ghcr.io/arfshl/archlinuxarm:latest
             ghcr.io/arfshl/archlinuxarm:${{ needs.build-arm64.outputs.RELEASE }}
             arfshl/archlinuxarm:latest
             arfshl/archlinuxarm:${{ needs.build-arm64.outputs.RELEASE }}
