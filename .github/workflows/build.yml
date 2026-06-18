@@ -22,7 +22,7 @@ jobs:
         RELEASE: ${{ steps.start_build.outputs.RELEASE }}
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
       - id: start_build
@@ -44,7 +44,7 @@ jobs:
         ARCH: ${{ matrix.arch }}
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
       - id: start_build
@@ -67,7 +67,7 @@ jobs:
     steps:
       
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v4
